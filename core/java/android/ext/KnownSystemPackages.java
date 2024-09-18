@@ -31,7 +31,7 @@ public final class KnownSystemPackages {
     private KnownSystemPackages(Context ctx) {
         Resources res = ctx.getResources();
         contactsProvider = "com.android.providers.contacts";
-        launcher = "com.android.launcher3";
+        launcher = "com.sleke.carthage";
         mediaProvider = "com.android.providers.media.module";
         permissionController = "com.android.permissioncontroller";
         settings = "com.android.settings";

@@ -60,6 +60,39 @@ applications that come with the platform
         <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.sleke.carthage">
+        <permission name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+        <permission name="android.permission.REQUEST_DELETE_PACKAGES"/>
+        <permission name="android.permission.INTERNET"/>
+        <permission name="android.permission.ACCESS_NETWORK_STATE"/>
+        <permission name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"/>
+        <permission name="android.permission.READ_CONTACTS"/>
+        <permission name="android.permission.READ_EXTERNAL_STORAGE"/>
+        <permission name="android.permission.READ_MEDIA_IMAGES"/>
+        <permission name="android.permission.READ_CALL_LOG"/>
+        <permission name="android.permission.ACCESS_NOTIFICATIONS"/>
+        <permission name="android.permission.QUERY_ALL_PACKAGES"/>
+        <permission name="android.permission.BLUETOOTH"/>
+        <permission name="android.permission.BLUETOOTH_ADMIN"/>
+        <permission name="android.permission.ACCESS_WIFI_STATE"/>
+        <permission name="android.permission.READ_PHONE_STATE"/>
+        <permission name="android.permission.BATTERY_STATS"/>
+        <permission name="android.permission.READ_EXTERNAL_STORAGE"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        <permission name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+        <permission name="android.permission.ROLE_ASSISTANT"/>
+        <permission name="android.permission.CAMERA"/>
+        <permission name="android.permission.POST_NOTIFICATIONS"/>
+        <permission name="android.permission.FOREGROUND_SERVICE"/>
+        <permission name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/>
+        <permission name="android.permission.WAKE_LOCK"/>
+        <permission name="com.google.android.gms.permission.AD_ID"/>
+        <permission name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+        <permission name="com.sleke.carthage.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    </privapp-permissions>
+
+
     <privapp-permissions package="com.android.location.fused">
         <permission name="android.permission.INSTALL_LOCATION_PROVIDER"/>
         <permission name="android.permission.UPDATE_DEVICE_STATS"/>

@@ -383,12 +383,34 @@ public class PackageInstallerActivity extends Activity {
         return info;
     }
 
+    private boolean isCustomStore() {
+        Intent intent = getIntent();
+        boolean isCustomStore = intent.getBooleanExtra("EXTRA_IS_CUSTOM_STORE", false);
+        Log.d(TAG, "isCustomStore: Intent extra isCustomStore = " + isCustomStore);
+        return isCustomStore;
+    }
+    private void showProhibitedDialog() {
+        new AlertDialog.Builder(this) 
+     	.setTitle("Installation Prohibited")
+        .setMessage("Installing apps outside of the store is prohibited.")
+        .setPositiveButton(android.R.string.ok, (dialog, which) -> finish())
+        .setIcon(android.R.drawable.ic_dialog_alert)
+        .show();
+    }
+
     @Override
     protected void onCreate(Bundle icicle) {
         if (mLocalLOGV) Log.i(TAG, "creating for user " + UserHandle.myUserId());
         getWindow().addSystemFlags(SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS);
 
-        super.onCreate(null);
+        //super.onCreate(null);
+        super.onCreate(icicle); // Ensure this is called first
+        if (!isCustomStore()) {
+                Log.d(TAG, "onCreate: NO Custom store detected, exiting");
+                //finish(); // Exiting if it's not a custom store
+                showProhibitedDialog();
+                return;
+        }
 
         if (icicle != null) {
             mAllowUnknownSources = icicle.getBoolean(ALLOW_UNKNOWN_SOURCES_KEY);
